@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:wtechvideo/constants/theme.dart';
 
-import '../constants/theme.dart';
 
 class Onboarding extends StatelessWidget {
   @override
@@ -35,22 +35,33 @@ class Onboarding extends StatelessWidget {
                             child: Center(
                                 child: Column(
                                   children: [
+                                    // Container(
+                                    //     width: MediaQuery.of(context).size.width / 3,
+                                    //     decoration: BoxDecoration(
+                                    //       borderRadius: BorderRadius.circular(100),
+                                    //       color: Colors.white.withOpacity(0.3)
+                                    //     ),
+                                    //     child:const FittedBox(
+                                    //         fit: BoxFit.contain,
+                                    //         child: Padding(
+                                    //           padding: EdgeInsets.all(16.0),
+                                    //           child: Text("Dinçer KIZILDERE",
+                                    //               style: TextStyle(
+                                    //                   color: WtechTheme.yellow,
+                                    //                   fontWeight: FontWeight.w600)),
+                                    //         ))),
                                     Container(
-                                        width: MediaQuery.of(context).size.width / 3,
-                                        child:const FittedBox(
-                                            fit: BoxFit.contain,
-                                            child: Text("Dinçer KIZILDERE",
-                                                style: TextStyle(
-                                                    color: WtechTheme.yellow,
-                                                    fontWeight: FontWeight.w600)))),
-                                    Container(
-                                        width: MediaQuery.of(context).size.width / 3,
+                                        width: MediaQuery.of(context).size.width / 4,
+                                        decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: Colors.white.withOpacity(0.3)
+                                        ),
                                         child:const FittedBox(
                                           fit: BoxFit.contain,
-                                          child: Text("Flutter",
+                                          child: Text("DevPort",
                                               style: TextStyle(
                                                   color: WtechTheme.yellow,
-                                                  fontWeight: FontWeight.w600)),
+                                                  fontWeight: FontWeight.w600,)),
                                         ))
                                   ],
                                 ))),
@@ -71,7 +82,7 @@ class Onboarding extends StatelessWidget {
                             Text('Dinçer KIZILDERE',
                                 style: TextStyle(
                                     color: WtechTheme.white,
-                                    fontWeight: FontWeight.w600))
+                                    fontWeight: FontWeight.w600,))
                           ],
                         ),
                       ],
@@ -89,13 +100,13 @@ class Onboarding extends StatelessWidget {
                           ),
                           ),
                           onPressed: () {
-                            Navigator.pushReplacementNamed(context, '/profile');
+                            Navigator.pushNamed(context, '/profile');
                           },
                           child:const Padding(
                               padding:  EdgeInsets.only(
                                   left: 16.0, right: 16.0, top: 16, bottom: 16),
                               child: Text("GET STARTED",
-                                  style: TextStyle(fontSize: 20.0))),
+                                  style: TextStyle(fontSize: 20.0,color: WtechTheme.black))),
                         ),
                       ),
                     )

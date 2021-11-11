@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wtechvideo/screens/contact_screen.dart';
 import 'package:wtechvideo/screens/profile.dart';
 
 import 'screens/onboarding.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         "/onboarding": (BuildContext context) =>  Onboarding(),
         "/profile": (BuildContext context) =>  Profile(),
         "/videos": (BuildContext context) =>  VideoScreen(),
+        "/contact": (BuildContext context) =>  ContactScreen(),
       },
     );
   }

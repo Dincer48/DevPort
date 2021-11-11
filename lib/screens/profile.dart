@@ -1,10 +1,12 @@
 import 'dart:ui';
 import 'package:awesome_dialog/awesome_dialog.dart';
+// import 'package:contactus/contactus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:wtechvideo/constants/theme.dart';
+import 'package:wtechvideo/widgets/contactus.dart';
 import 'package:wtechvideo/widgets/drawer.dart';
 
 class Profile extends StatelessWidget {
@@ -44,7 +46,7 @@ class Profile extends StatelessWidget {
                 btnCancelOnPress: (){
                 },
                 btnOkOnPress: (){
-                  Navigator.pushReplacementNamed(context, '/videos');
+                  Navigator.pushNamed(context, '/videos');
                 }
               )..show()
               ),
@@ -54,6 +56,16 @@ class Profile extends StatelessWidget {
         ),
         backgroundColor: WtechTheme.bgColorScreen,
         drawer: DrawerWidget(currentPage: "Profile"),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: ContactUsBottomAppBar(
+            companyName: 'Dinçer KIZILDERE',
+            textColor: Colors.white,
+            backgroundColor: WtechTheme.text,
+            email: 'dincerkizildere97@gmail.com',
+            // textFont: 'Sail',
+          ),
+        ),
         body: Stack(
           children: <Widget>[
             Column(

@@ -1,4 +1,4 @@
-import 'package:awesome_dialog/awesome_dialog.dart';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -67,7 +67,7 @@ class DrawerWidget extends StatelessWidget {
                     DrawerTile(
                         icon: Icons.home,
                         onTap: () {
-                            Navigator.pushReplacementNamed(context, '/onboarding');
+                            Navigator.pushNamed(context, '/onboarding');
                         },
                         iconColor: WtechTheme.primary,
                         title: "Home",
@@ -77,7 +77,7 @@ class DrawerWidget extends StatelessWidget {
                         icon: Icons.person,
                         onTap: () {
                           if (currentPage != "Profile")
-                            Navigator.pushReplacementNamed(context, '/profile');
+                            Navigator.pushNamed(context, '/profile');
                         },
                         iconColor: WtechTheme.yellow,
                         title: "Profile",
@@ -86,30 +86,31 @@ class DrawerWidget extends StatelessWidget {
                     DrawerTile(
                         icon: Icons.help,
                         onTap: () {
-                          AwesomeDialog(
-                              context: context,
-                              dialogType: DialogType.ERROR,
-                              animType: AnimType.SCALE,
-                              body: Center(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children:const [
-                                     Text(
-                                    'Coming Soon!',
-                                    style: TextStyle(fontStyle: FontStyle.italic, fontSize: 25),
-                              ),
-                                    Icon(FontAwesomeIcons.smileWink)
-                                  ],
-                                ),
-                              ),
-                              btnOkOnPress: (){
-                              }
-
-                          ).show();
+                          // AwesomeDialog(
+                          //     context: context,
+                          //     dialogType: DialogType.ERROR,
+                          //     animType: AnimType.SCALE,
+                          //     body: Center(
+                          //       child: Row(
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         children:const [
+                          //            Text(
+                          //           'Coming Soon!',
+                          //           style: TextStyle(fontStyle: FontStyle.italic, fontSize: 25),
+                          //     ),
+                          //           Icon(FontAwesomeIcons.smileWink)
+                          //         ],
+                          //       ),
+                          //     ),
+                          //     btnOkOnPress: (){
+                          //     }
+                          //
+                          // ).show();
+                          Navigator.pushNamed(context, '/contact');
                         },
                         iconColor: WtechTheme.yellow,
-                        title: "Help",
-                        isSelected: currentPage == "Help" ? true : false),
+                        title: "Contact",
+                        isSelected: currentPage == "Contact" ? true : false),
                   ],
                 ),
               ),

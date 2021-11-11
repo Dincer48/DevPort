@@ -9,6 +9,8 @@ class WtechTheme {
 
   static const Color primary = Color.fromRGBO(249, 99, 50, 1.0);
 
+  static const Color red = Color.fromRGBO(248, 35, 59, 1.0);
+
   static const Color info = Color.fromRGBO(44, 168, 255, 1.0);
 
   static const Color yellow = Color.fromRGBO(255, 178, 54, 1.0);

@@ -6,6 +6,8 @@ import 'package:wtechvideo/widgets/drawer.dart';
 import 'package:wtechvideo/widgets/video_items.dart';
 
 class VideoScreen extends StatelessWidget {
+  const VideoScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
